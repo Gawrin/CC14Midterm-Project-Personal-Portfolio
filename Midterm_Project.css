@@ -11,10 +11,16 @@ body {
 .wrapper {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(36, 1fr);
-    grid-auto-rows: 100px;
+    grid-auto-rows: minmax(65px, auto); 
     margin-left: 400px;
     margin-right: 400px;
+  }
+
+  @media (max-width: 768px) {
+    .wrapper {
+      grid-template-columns: 1fr;
+      padding: 10px;
+    }
   }
   
   .boxnav{
